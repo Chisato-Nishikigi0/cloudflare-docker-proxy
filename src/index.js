@@ -10,9 +10,6 @@ if (url.pathname === "/") {
   });
 }
 
-
-
-
 addEventListener("fetch", (event) => {
   event.passThroughOnException();
   event.respondWith(handleRequest(event.request));
@@ -29,10 +26,10 @@ const routes = {
   "k8s.vanilleeis.top": "https://registry.k8s.io",
   "ghcr.vanilleeis.top": "https://ghcr.io",
   "cloudsmith.vanilleeis.top": "https://docker.cloudsmith.io",
-  "ecr.vanilleeis.top": "https://public.ecr.aws",
+ // "ecr.vanilleeis.top": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.vanilleeis.top": dockerHub,
+ // "docker-staging.vanilleeis.top": dockerHub,
 };
 
 function routeByHosts(host) {
